@@ -125,6 +125,14 @@ min-height: 100vh;
 .sendButton:hover {
   background: #3b72d9;
 }
+.sendButton:disabled {
+  background: #ddd;
+  cursor: not-allowed;
+}
+
+.sendButton:hover:not(:disabled) {
+  background: #8b5cf6;
+}
 /* Suggestions block */
 .suggestions {
   text-align: center;

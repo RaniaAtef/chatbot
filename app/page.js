@@ -136,13 +136,12 @@ export default function Home() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask about meals, replacements, snacks..."
-              disabled={isLoading}
             />
             <button
               type="submit"
               className={styles.sendButton}
-              disabled={isLoading || !input.trim()}
-            >
+              disabled={!input.trim()}   // only enabled when input has text
+              >
               ➤
             </button>
           </form>
